@@ -1,0 +1,307 @@
+<!doctype html>
+
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C.Groove</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style-club.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Noto+Sans+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+ </head>
+
+ <body>
+   
+ <header>
+    <img src="images/logo-cgroove.png" class="logo" alt="C.Groove Logo" height="40" onclick="location.href='/main.html'">
+    <nav>
+      <a href="genre.html">장르</a>
+      <a href="club.html">동아리</a>
+      <a href="event.html">행사</a>
+      <a href="calendar.html">달력</a>
+    </nav>
+  </header>
+  
+ 
+  <div class="filter-bar">
+    <div class="group">
+      <span>대학명</span>
+      <span>ㄱ~ㅅ</span>
+      <span>ㅇ~ㅎ</span>
+      <span>a~m</span>
+      <span>n~z</span>
+    </div>
+    <div class="group">
+      <span>동아리명</span>
+      <span>ㄱ~ㅅ</span>
+      <span>ㅇ~ㅎ</span>
+      <span>a~m</span>
+      <span>n~z</span>
+    </div>
+  </div>
+  
+  <div class="container">
+   
+  <div class="club-grid">
+    <div class="club-card" onclick="toggleCard(this)">
+      <img src="images/tipssy-logo.png" alt="TIPSSY" class="club-logo">
+      <div class="club-info">
+        <div class="club-name">TIPSSY</div>
+        <div class="club-desc" data-default>
+            서울여자대학교<hr>
+          Drink the Rhythm, TIPSSY!<br>
+          서울여자대학교 유일무이 스트릿 댄스 동아리<br>
+        </div>
+        <div class="club-desc" data-detail style="display:none">
+          소속<hr>
+          • 더유니온<br>
+          • 여대배틀<br>
+          • s.w.a.g_party<br><br>
+          <div class="club-links">
+            <a href="https://www.instagram.com/tipssy_swu/" target="_blank">Insta</a>
+            <a href="https://www.youtube.com/@TIPSSYSWU" target="_blank">Youtube</a>
+          </div>
+        </div>
+      </div>
+      <div class="toggle-btn">▶</div>
+    </div>
+
+   
+<div class="club-card" onclick="toggleCard(this)">
+    <img src="images/dancepozz-logo.png" alt="DANCE PO.ZZ" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">DANCE PO.ZZ</div>
+      <div class="club-desc" data-default>
+        중앙대학교 서울캠퍼스<hr>
+        We love you just the way you are!<br>
+        중앙대학교 서울캠퍼스 유일무이 중앙 스트릿 댄스 동아리<br>
+      </div>
+      <div class="club-desc" data-detail style="display:none">
+        소속<hr>
+          • 더유니온<br><br>
+        <div class="club-links">
+          <a href="https://www.instagram.com/dancepozz_official/" target="_blank">Insta</a>
+          <a href="https://www.youtube.com/@DancePozz" target="_blank">Youtube</a>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-btn">▶</div>
+  </div>
+  
+ 
+<div class="club-card" onclick="toggleCard(this)">
+    <img src="images/kudt-logo.png" alt="KUDT" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">KUDT</div>
+      <div class="club-desc" data-default>
+        고려대학교 서울캠퍼스<hr>
+        KOREA UNIVERSITY DANCE TEAM<br>
+        고려대학교 유일무이 중앙 스트릿 댄스 동아리<br>
+      </div>
+      <div class="club-desc" data-detail style="display:none">
+        소속<hr>
+          • 더유니온<br>
+          • DBDBDIP<br><br>
+        <div class="club-links">
+          <a href="https://www.instagram.com/kudt.official/" target="_blank">Insta</a>
+          <a href="https://www.youtube.com/@KUDT" target="_blank">Youtube</a>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-btn">▶</div>
+  </div>
+  
+
+<div class="club-card" onclick="toggleCard(this)">
+    <img src="images/rah-logo.png" alt="RAH" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">RAH</div>
+      <div class="club-desc" data-default>
+        서울시립대학교<hr>
+        rah_univofseoul<br>
+        서울시립대학교 중앙 스트릿 댄스 동아리
+      </div>
+      <div class="club-desc" data-detail style="display:none">
+        소속<hr>
+          • 더유니온<br>
+          • HOEGI PO.WER.<br>
+          • 무방비<br>
+          • BRMB<br>
+          • DBDBDIP<br><br>
+        <div class="club-links">
+          <a href="https://www.instagram.com/rah_univofseoul/" target="_blank">Insta</a>
+          <a href="https://www.youtube.com/@RAH-yd9rg" target="_blank">Youtube</a>
+        </div>
+      </div>
+    </div>
+    <div class="toggle-btn">▶</div>
+  </div>
+  
+
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/nod-logo.png" alt="NOD" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">NOD</div>
+      <div class="club-desc" data-default>
+        한성대학교<hr>
+        한성대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/WANNA-logo.png" alt="WANNA" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">WANNA FAMILY</div>
+      <div class="club-desc" data-default>
+        건국대학교<hr>
+        건국대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/hfdb-logo.png" alt="hfdb" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">Hufs Dovy</div>
+      <div class="club-desc" data-default>
+        한국외국어대학교<hr>
+        한국외국어대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/stsdc-logo.png" alt="stsdc" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">열혈무군</div>
+      <div class="club-desc" data-default>
+        서울과학기술대학교<hr>
+        서울과학기술대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/b-logo.png" alt="b" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">발광</div>
+      <div class="club-desc" data-default>
+        경희대학교<hr>
+        경희대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/soully-logo.png" alt="soully" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">Soully</div>
+      <div class="club-desc" data-default>
+        덕성여자대학교<hr>
+        덕성여자대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/nrsc-logo.png" alt="nrsc" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">NRSC</div>
+      <div class="club-desc" data-default>
+        단국대학교 죽전캠퍼스<hr>
+        단국대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/beat-logo.png" alt="beat" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">Beat</div>
+      <div class="club-desc" data-default>
+        아주대학교<hr>
+        아주대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/avtion-logo.png" alt="avtion" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">ACTION</div>
+      <div class="club-desc" data-default>
+        이화여자대학교<hr>
+        이화여자대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/beatz-logo.png" alt="beatz" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">Beatzflow</div>
+      <div class="club-desc" data-default>
+        홍익대학교<hr>
+        홍익대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/hiption-logo.png" alt="hiption" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">Hiption</div>
+      <div class="club-desc" data-default>
+        성신여자대학교<hr>
+        성신여자대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/m-logo.png" alt="MoreLib" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">MoreLib</div>
+      <div class="club-desc" data-default>
+        한양대학교<hr>
+        한양대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+  <div class="club-card" onclick="toggleCard(this)">
+    <img src="images/odc-logo.png" alt="odc" class="club-logo">
+    <div class="club-info">
+      <div class="club-name">ODC</div>
+      <div class="club-desc" data-default>
+        동국대학교<hr>
+        동국대학교 스트릿 댄스 동아리
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+  </div>
+  <div class="top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">TOP</div>
+  
+  <div class="wrapper"></div>
+  <footer>
+    Copyright &copy; 2025 Designed by Hongyoungseo
+  </footer>
+  
+  <script>
+    function toggleCard(card) {
+      const isExpanded = card.classList.toggle('expanded');
+      const defaultDesc = card.querySelector('[data-default]');
+      const detailDesc = card.querySelector('[data-detail]');
+  
+      if (isExpanded) {
+        defaultDesc.style.display = 'none';
+        detailDesc.style.display = 'block';
+      } else {
+        defaultDesc.style.display = 'block';
+        detailDesc.style.display = 'none';
+      }
+    }
+  </script>
+  
+  </body>
+  </html>
+  

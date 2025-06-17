@@ -1,0 +1,198 @@
+<!doctype html>
+
+<html lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C.Groove</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style-calendar.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&family=Noto+Sans+KR:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+ </head>
+
+ <body>
+    <header>
+      <img src="images/logo-cgroove.png" class="logo" alt="C.Groove Logo" height="40" onclick="location.href='/main.html'">
+      <nav>
+          <a href="genre.html">장르</a>
+          <a href="club.html">동아리</a>
+          <a href="event.html">행사</a>
+          <a href="calendar.html">달력</a>
+        </nav>
+      </header>
+    
+      <div class="container">
+      <div class="calendar-container">
+        <div class="calendar-header">
+          <button onclick="changeMonth(-1)">&#x25C1;</button>
+          <span id="calendar-title">2025 June</span>
+          <button onclick="changeMonth(1)">&#x25B7;</button>
+        </div>
+    
+        <div class="calendar-grid">
+          <div class="day-name">Sun</div><div class="day-name">Mon</div><div class="day-name">Tue</div>
+          <div class="day-name">Wed</div><div class="day-name">Thu</div><div class="day-name">Fri</div><div class="day-name">Sat</div>
+        </div>
+    
+        <div class="event-preview" id="event-preview">
+          <img id="event-img" src="" alt="event">
+          <div class="event-info">
+            <h3 id="event-title"></h3>
+            <hr>
+            <p id="event-date"></p>
+            <p id="event-location"></p>
+            
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">TOP</div>
+  
+<div class="wrapper"></div>
+<footer>
+  Copyright &copy; 2025 Designed by Hongyoungseo
+</footer>
+    
+      <script>
+        const events = {
+          '2025-06-04': {
+            title: '2025 LINE UP SEASON Xkr',
+            date: '2025.06.04 (Wed) - 06.09 (Mon)',
+            location: 'ACC 국립아시아문화전당',
+            img: 'images/event-lineupx.png',
+            link: 'events.html'
+          },
+          '2025-06-05': {
+            title: '2025 LINE UP SEASON Xkr',
+            date: '2025.06.04 (Wed) - 06.09 (Mon)',
+            location: 'ACC 국립아시아문화전당',
+            img: 'images/event-lineupx.png',
+            link: 'events.html'
+          },
+          '2025-06-06': {
+            title: '2025 LINE UP SEASON Xkr',
+            date: '2025.06.04 (Wed) - 06.09 (Mon)',
+            location: 'ACC 국립아시아문화전당',
+            img: 'images/event-lineupx.png',
+            link: 'events.html'
+          },
+          '2025-06-07': {
+            title: '2025 LINE UP SEASON Xkr',
+            date: '2025.06.04 (Wed) - 06.09 (Mon)',
+            location: 'ACC 국립아시아문화전당',
+            img: 'images/event-lineupx.png',
+            link: 'events.html'
+          },
+          '2025-06-08': {
+            title: '2025 LINE UP SEASON Xkr',
+            date: '2025.06.04 (Wed) - 06.09 (Mon)',
+            location: 'ACC 국립아시아문화전당',
+            img: 'images/event-lineupx.png',
+            link: 'events.html'
+          },
+          '2025-06-09': {
+            title: '2025 LINE UP SEASON Xkr',
+            date: '2025.06.04 (Wed) - 06.09 (Mon)',
+            location: 'ACC 국립아시아문화전당',
+            img: 'images/event-lineupx.png',
+            link: 'events.html'
+          },
+          '2025-06-21': {
+            title: 'Splash vol.3',
+            date: '2025.06.21 (Sat)',
+            location: '대구예술발전소 수창홀',
+            img: 'images/event-splash.png',
+            link: 'events.html'
+          },
+          '2025-08-03': {
+           title: 'ONLY WAACKING VOL.4',
+            date: '2025.08.03 (Sun)',
+             location: '서울호서예술실용전문학교',
+            img: 'images/event-waacking.png', 
+             link: 'events.html'
+              },
+              '2025-08-10': {
+               title: 'we make the vibe',
+              date: '2025.08.10 (Sun)',
+              location: '포씨어홀',
+               img: 'images/event-vibe.png',
+               link: 'events.html'
+                },
+              '2025-09-06': {
+                title: 'PARTYLOCK',
+               date: '2025.09.06 (Sat)',
+               location: '루프트스튜디오',
+               img: 'images/event-partylock.png',
+                link: 'events.html'
+              }
+        };
+    
+        const grid = document.querySelector('.calendar-grid');
+        const title = document.getElementById('calendar-title');
+        const preview = document.getElementById('event-preview');
+        const now = new Date(2025, 5); 
+        let selected;
+    
+        function renderCalendar(date) {
+          title.innerText = `${date.getFullYear()} ${date.toLocaleString('en-US', { month: 'long' })}`;
+          const first = new Date(date.getFullYear(), date.getMonth(), 1);
+          const last = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+          const startDay = first.getDay();
+          const total = last.getDate();
+    
+          const today = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+          document.querySelectorAll('.day').forEach(d => d.remove());
+    
+          for (let i = 0; i < startDay; i++) grid.insertAdjacentHTML('beforeend', '<div class="day"></div>');
+    
+          for (let d = 1; d <= total; d++) {
+            const fullDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+            const hasEvent = events[fullDate] !== undefined;
+            const eventMark = hasEvent ? `<div class="event-dot">• ${events[fullDate].title}</div>` : '';
+    
+            const cell = document.createElement('div');
+            cell.className = 'day';
+            cell.innerHTML = `${d}${eventMark}`;
+            cell.addEventListener('click', () => selectDate(cell, fullDate));
+            grid.appendChild(cell);
+          }
+          preview.classList.remove('active');
+
+        }
+    
+        function selectDate(cell, fullDate) {
+          document.querySelectorAll('.day').forEach(d => d.classList.remove('selected'));
+          cell.classList.add('selected');
+    
+          const data = events[fullDate];
+          if (data) {
+            preview.classList.add('active');
+            document.getElementById('event-title').innerText = data.title;
+            document.getElementById('event-date').innerText = data.date;
+            document.getElementById('event-location').innerText = data.location;
+            document.getElementById('event-img').src = data.img;
+            document.getElementById('event-link').href = data.link;
+          } else {
+            preview.classList.remove('active');
+          }
+        }
+    
+        function changeMonth(offset) {
+          now.setMonth(now.getMonth() + offset);
+          renderCalendar(now);
+        }
+    
+        renderCalendar(now);
+
+        
+      </script>
+    </body>
+    </html>
+    

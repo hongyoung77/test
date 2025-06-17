@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('fonts/KIMM_Bold.ttf') format('woff2');
+  }
+  @font-face {
+    font-family: 'KIMM_Light';
+    src: url('fonts/KIMM_Light.ttf') format('woff2');
+  }
+  @font-face {
+    font-family: 'Bagel Fat One';
+    src: url('fonts/BagelFatOne-Regular.ttf') format('woff2');
+  }
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('fonts/Pretendard-Regular.otf') format('woff2');
+  }
+
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  body {
+    margin: 0;
+    font-family: 'KIMM_Bold', sans-serif;
+    background-color: #fff;
+  }
+ 
+  
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #555555;
+  }
+
+  nav a {
+    margin: 25px;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-family: 'KIMM_Bold';
+    font-weight: normal;
+  }
+  .banner {
+    width: 100%;
+    height: auto;
+  }
+  
+  .today-section {
+    background-color: #eee;
+    padding: 30px ;
+    text-align: center;
+  }
+  .today-title {
+    font-family: 'Bagel Fat One';
+    font-size: 46px;
+    font-weight: normal;
+    color: #2b2b2b;
+    margin-bottom: 30px;
+  }
+  .event-box {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .event-box a img {
+    width: 200px;
+    height: auto;
+    border-radius: 16px;
+    transition: transform 0.3s;
+    margin-bottom: 10px;
+  }
+  .event-box a img:hover {
+    transform: scale(1.05);
+  }
+  .event-info {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Pretendard-Regular';
+    margin-top: 10px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  .top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #686868;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: 'Pretendard-Regular';
+    font-weight: normal;
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    background: #333;
+    color: #ccc;
+    font-family: 'Pretendard-Regular';
+    margin-top: 0px;
+  }
